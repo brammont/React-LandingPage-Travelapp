@@ -1,5 +1,6 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react';
+import { Button } from './Button';
+import {Link} from 'react-router-dom';
 function Navbar() {
     const [click, setClick] = useState(false);
     const handleClick =()=> setClick(!click);
@@ -14,32 +15,33 @@ function Navbar() {
                     <div className="manu-icon" onClick={handleClick}>
                         <i className={click ? 'fas fa-times': 'fas fa-bars'}/>
                     </div>
+                    <ul className={click ? 'nav-menu active': 'nav menu'}>
+                        <li className='nav-item'>
+                            <Link to="/" className='nav-link' onClick={closeMobileMenu}>
+                                Principal
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to="/services" className='nav-link' onClick={closeMobileMenu}>
+                                Servicios
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to="/products" className='nav-link' onClick={closeMobileMenu}>
+                                Productos
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to="/sing-up" className='nav-link' onClick={closeMobileMenu}>
+                                Registrarse
+                            </Link>
+                        </li>
+                    </ul>
+                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
                 </div>
-                <ul className={click ? 'nav-menu active': 'nav menu'}>
-                    <li className='nav-item'>
-                        <Link to="/" className='nav-link' onClick={closeMobileMenu}>
-                            Principal
-                        </Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to="/services" className='nav-link' onClick={closeMobileMenu}>
-                            Servicios
-                        </Link>
-                        <li className='nav-item'>
-                        <Link to="/products" className='nav-link' onClick={closeMobileMenu}>
-                            Productos
-                        </Link>
-                        <li className='nav-item'>
-                        <Link to="/sing-up" className='nav-link' onClick={closeMobileMenu}>
-                            Registrarse
-                        </Link>
-                    </li>
-                    </li>
-                    </li>
-                </ul>
             </nav>
         </>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

@@ -21,41 +21,57 @@ function Navbar() {
     window.addEventListener('resize',showButton)
     return (
         <>
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
-                        TRVL <i className="fab fa-typo3"/>
-                    </Link>
-                    <div className="manu-icon" onClick={handleClick}>
-                        <i className={click ? 'fas fa-times': 'fas fa-bars'}/>
-                    </div>
-                    <ul className={click ? 'nav-menu active': 'nav menu'}>
-                        <li className='nav-item'>
-                            <Link to="/" className='nav-link' onClick={closeMobileMenu}>
-                                Principal
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/services" className='nav-link' onClick={closeMobileMenu}>
-                                Servicios
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/products" className='nav-link' onClick={closeMobileMenu}>
-                                Productos
-                            </Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/sing-up" className='nav-link' onClick={closeMobileMenu}>
-                                Registrarse
-                            </Link>
-                        </li>
-                    </ul>
-                    {button && <Button buttonStyle='btn--outline'>Registrarse</Button>}
-                </div>
-            </nav>
+          <nav className='navbar'>
+            <div className='navbar-container'>
+              <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                TRVL
+                <i class='fab fa-typo3' />
+              </Link>
+              <div className='menu-icon' onClick={handleClick}>
+                <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+              </div>
+              <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                <li className='nav-item'>
+                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    Princial
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link
+                    to='/services'
+                    className='nav-links'
+                    onClick={closeMobileMenu}
+                  >
+                    Servicios
+                  </Link>
+                </li>
+                <li className='nav-item'>
+                  <Link
+                    to='/products'
+                    className='nav-links'
+                    onClick={closeMobileMenu}
+                  >
+                    Productos
+                  </Link>
+                </li>
+    
+                <li>
+                  <Link
+                    to='/sign-up'
+                    className='nav-links-mobile'
+                    onClick={closeMobileMenu}
+                  >
+                    Registro
+                  </Link>
+                </li>
+              </ul>
+              {button && <Button buttonStyle='btn--outline'>Registro</Button>}
+            </div>
+          </nav>
         </>
-    );
-}
 
-export default Navbar;
+
+      );
+    }
+    
+    export default Navbar;

@@ -21,6 +21,21 @@ function Navbar() {
                             Principal
                         </Link>
                     </li>
+                    <li className='nav-item'>
+                        <Link to="/services" className='nav-link' onClick={closeMobileMenu}>
+                            Servicios
+                        </Link>
+                        <li className='nav-item'>
+                        <Link to="/products" className='nav-link' onClick={closeMobileMenu}>
+                            Productos
+                        </Link>
+                        <li className='nav-item'>
+                        <Link to="/sing-up" className='nav-link' onClick={closeMobileMenu}>
+                            Registrarse
+                        </Link>
+                    </li>
+                    </li>
+                    </li>
                 </ul>
             </nav>
         </>

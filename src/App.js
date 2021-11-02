@@ -5,7 +5,10 @@ function App() {
   return (
     <>
       <Router>
-      <Navbar/>
+        <Navbar />
+        <Switch>
+          <Router path="/" exact />
+        </Switch>
       </Router>
     </>
   );

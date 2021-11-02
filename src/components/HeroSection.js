@@ -14,7 +14,15 @@ function HeroSection() {
                     buttonSize="btn--large"
                 >
                     Empezar
-                </Button> 
+                </Button>
+                <Button 
+                    className="btns" 
+                    buttonStyle="btn--primary" 
+                    buttonSize="btn--large"
+                >
+                    Mirar triler 
+                    <i className='far fa-play-circle' />
+                </Button>  
             </div>
         </div>
     )

@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from 'react';
+import '../../App.css';
 function Registro() {
     return (
         <div>
-            <h1>Registro</h1>
+            <h1 className="sing-up">Registro</h1>
         </div>
     )
 }

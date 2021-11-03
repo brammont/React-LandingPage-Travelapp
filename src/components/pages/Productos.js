@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from 'react';
+import '../../App.css';
 function Productos() {
     return (
         <div>
-            <h1>Productos</h1>
+            <h1 className="products">Productos</h1>
         </div>
     )
 }
